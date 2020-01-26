@@ -6,6 +6,6 @@ node_modules/
 out
 tmp
 coverage
-lib/
+#lib/ commiting lib to allow npm github reference to sha
 .idea
 yarn.lock

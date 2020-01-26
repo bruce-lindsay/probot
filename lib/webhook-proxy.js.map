@@ -1,0 +1,1 @@
+{"version":3,"file":"webhook-proxy.js","sourceRoot":"","sources":["../src/webhook-proxy.ts"],"names":[],"mappings":";;AAGa,QAAA,kBAAkB,GAAG,UAAC,IAAyB;IAC1D,IAAI;QACF,MAAM,IAAI,KAAK,CAAC,uBAAuB,CAAC,CAAA;KACzC;IAAC,OAAO,GAAG,EAAE;QACZ,IAAI,CAAC,MAAM,CAAC,IAAI,CAAC,0EAA0E,CAAC,CAAA;QAC5F,OAAM;KACP;AACH,CAAC,CAAA"}
