@@ -19,7 +19,7 @@ import { logger } from './logger'
 import { logRequestErrors } from './middleware/log-request-errors'
 import { findPrivateKey } from './private-key'
 import { resolve } from './resolver'
-import { createServer } from './server'
+import { createServer, ServerArgs } from './server'
 import { createWebhookProxy } from './webhook-proxy'
 
 const cache = createDefaultCache()
@@ -58,6 +58,7 @@ export class Probot {
           webhookProxy: program.webhookProxy
         }
       }
+
       const privateKey = findPrivateKey()
       return {
         cert: (privateKey && privateKey.toString()) || undefined,
@@ -133,7 +134,10 @@ export class Probot {
         privateKey: options.cert as string
       })
     }
-    this.server = createServer({ webhook: (this.webhook as any).middleware, logger })
+
+    const createExpress = options.createExpress || createServer
+
+    this.server = createExpress({ webhook: (this.webhook as any).middleware, logger })
 
     // Log all received webhooks
     this.webhook.on('*', async (event: Webhooks.WebhookEvent<any>) => {
@@ -228,6 +232,8 @@ export const createProbot = (options: Options) => new Probot(options)
 
 export type ApplicationFunction = (app: Application) => void
 
+export type ExpressApplication = (args: ServerArgs) => express.Application
+
 export interface Options {
   webhookPath?: string
   secret?: string,
@@ -237,7 +243,8 @@ export interface Options {
   webhookProxy?: string,
   port?: number,
   redisConfig?: Redis.RedisOptions,
-  Octokit?: Octokit.Static
+  Octokit?: Octokit.Static,
+  createExpress?: ExpressApplication
 }
 
 export { Logger, Context, Application, Octokit }

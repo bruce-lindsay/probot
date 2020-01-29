@@ -8,6 +8,7 @@ import Redis from 'ioredis';
 import { Server } from 'http';
 import { Application } from './application';
 import { Context } from './context';
+import { ServerArgs } from './server';
 export declare class Probot {
     static run(appFn: ApplicationFunction | string[]): Promise<Probot>;
     server: express.Application;
@@ -29,6 +30,7 @@ export declare class Probot {
 }
 export declare const createProbot: (options: Options) => Probot;
 export declare type ApplicationFunction = (app: Application) => void;
+export declare type ExpressApplication = (args: ServerArgs) => express.Application;
 export interface Options {
     webhookPath?: string;
     secret?: string;
@@ -39,5 +41,6 @@ export interface Options {
     port?: number;
     redisConfig?: Redis.RedisOptions;
     Octokit?: Octokit.Static;
+    createExpress?: ExpressApplication;
 }
 export { Logger, Context, Application, Octokit };
