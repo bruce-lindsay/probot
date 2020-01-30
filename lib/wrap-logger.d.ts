@@ -1,4 +1,3 @@
-/// <reference types="bunyan" />
 import { Logger } from './';
 export declare const wrapLogger: (logger: Logger, baseLogger?: Logger | undefined) => LoggerWithTarget;
 export interface LoggerWithTarget extends Logger {

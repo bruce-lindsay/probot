@@ -1,4 +1,3 @@
-/// <reference types="bunyan" />
 import { graphql } from '@octokit/graphql';
 import Octokit from '@octokit/rest';
 import { Logger } from './logging';

@@ -23,8 +23,8 @@
  * ```
  */
 
-import Logger from 'bunyan'
 import bunyanFormat from 'bunyan-format'
+import Logger from 'bunyan-sfdx-no-dtrace'
 import supportsColor from 'supports-color'
 import { serializers } from './serializers'
 

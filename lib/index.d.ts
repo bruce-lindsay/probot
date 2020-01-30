@@ -2,7 +2,7 @@
 import { App as OctokitApp } from '@octokit/app';
 import Octokit from '@octokit/rest';
 import Webhooks from '@octokit/webhooks';
-import Logger from 'bunyan';
+import Logger from 'bunyan-sfdx-no-dtrace';
 import express from 'express';
 import Redis from 'ioredis';
 import { Server } from 'http';

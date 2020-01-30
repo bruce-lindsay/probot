@@ -1,5 +1,5 @@
 import { PayloadRepository, WebhookEvent } from '@octokit/webhooks'
-import bunyan from 'bunyan'
+import bunyan from 'bunyan-sfdx-no-dtrace'
 import express from 'express'
 
 export const serializers: bunyan.StdSerializers = {

@@ -4,7 +4,7 @@
 import {wrapLogger} from '../wrap-logger'
 import uuid from 'uuid'
 import express from 'express'
-import Logger from 'bunyan'
+import Logger from 'bunyan-sfdx-no-dtrace'
 
 export const logRequest = function ({logger}: any): express.RequestHandler {
   return function (req: Request, res: Response, next: NextFunction) {

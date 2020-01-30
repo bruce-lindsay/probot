@@ -22,5 +22,5 @@
  * app.log.fatal("Goodbye, cruel world!");
  * ```
  */
-import Logger from 'bunyan';
+import Logger from 'bunyan-sfdx-no-dtrace';
 export declare const logger: Logger;

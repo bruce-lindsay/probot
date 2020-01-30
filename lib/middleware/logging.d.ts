@@ -1,5 +1,5 @@
 import express from 'express';
-import Logger from 'bunyan';
+import Logger from 'bunyan-sfdx-no-dtrace';
 export declare const logRequest: ({ logger }: any) => express.RequestHandler<import("express-serve-static-core").ParamsDictionary>;
 export interface Request extends express.Request {
     id?: string | number | string[];

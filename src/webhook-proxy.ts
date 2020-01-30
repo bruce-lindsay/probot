@@ -1,4 +1,4 @@
-import Logger from 'bunyan'
+import Logger from 'bunyan-sfdx-no-dtrace'
 import EventSource from 'eventsource'
 
 export const createWebhookProxy = (opts: WebhookProxyOptions): EventSource | undefined => {
