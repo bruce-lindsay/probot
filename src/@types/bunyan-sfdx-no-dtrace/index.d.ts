@@ -10,7 +10,7 @@ declare module "bunyan-sfdx-no-dtrace" {
 
         addStream(s: any, defaultLevel?: any): void;
 
-        child(options: any, simple: any): any;
+        child(options: any, simple?: any): any;
 
         debug(...args: any[]): any;
 
