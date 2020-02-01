@@ -1,8 +1,8 @@
 {
-  "name": "probot",
-  "version": "0.0.0-development",
-  "description": "🤖 A framework for building GitHub Apps to automate and improve your workflow",
-  "repository": "https://github.com/probot/probot",
+  "name": "@skynet1024/probot",
+  "version": "0.0.1-experimental",
+  "description": "🤖 A framework for building GitHub Apps to automate and improve your workflow. Slightly forked to allow overriding express server creation",
+  "repository": "https://github.com/bruce-lindsay/probot/",
   "main": "lib/index.js",
   "types": "./lib/index.d.ts",
   "bin": {
